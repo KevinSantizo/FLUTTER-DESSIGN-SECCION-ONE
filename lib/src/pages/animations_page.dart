@@ -5,8 +5,20 @@ class AnimationPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text('data'),
+        child: Rectangle(),
       ),
     );
   }
+}
+class Rectangle extends StatelessWidget {
+    @override
+    Widget build(BuildContext context) {
+    return Container(
+        width: 70,
+        height: 70,
+        decoration: BoxDecoration(
+          color: Colors.blue
+        ),
+      );
+    }
 }

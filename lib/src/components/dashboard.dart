@@ -1,6 +1,9 @@
+import 'package:backgrounds_custom_painter/src/pages/animations_page.dart';
 import 'package:backgrounds_custom_painter/src/pages/home.dart';
 import 'package:backgrounds_custom_painter/src/theme/theme.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_vector_icons/flutter_vector_icons.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 // import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 
 
@@ -26,7 +29,7 @@ class _DashboardPageState extends State<DashboardPage>   {
   final List<Widget> pages = [
 
     Home(),
-    // Reservations(),
+    AnimationPage(),
     // Reserve(),
     // Profile(),
 
@@ -52,12 +55,12 @@ class _DashboardPageState extends State<DashboardPage>   {
         },
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            title: Text('Inicio'),
+            icon: Icon(MdiIcons.wall),
+            title: Text('Backgrounds'),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.arrow_back_ios),
-            title: Text('Partidos'),
+            icon: Icon(MdiIcons.chartBubble),
+            title: Text('Animations'),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.arrow_drop_down),
