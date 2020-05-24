@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'src/pages/circular_header.dart';
 import 'src/pages/curve_header.dart';
 import 'src/pages/diagonal_header.dart';
-import 'src/pages/home.dart';
 import 'src/pages/pico_header.dart';
 import 'src/pages/triangle_header.dart';
 import 'src/pages/waves_header.dart';

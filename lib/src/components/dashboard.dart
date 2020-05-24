@@ -2,9 +2,7 @@ import 'package:backgrounds_custom_painter/src/pages/animations_page.dart';
 import 'package:backgrounds_custom_painter/src/pages/home.dart';
 import 'package:backgrounds_custom_painter/src/theme/theme.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
-// import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 
 
 class DashboardPage extends StatefulWidget {
