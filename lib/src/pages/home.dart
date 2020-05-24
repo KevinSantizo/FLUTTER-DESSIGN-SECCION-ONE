@@ -1,3 +1,9 @@
+import 'package:backgrounds_custom_painter/src/pages/circular_header.dart';
+import 'package:backgrounds_custom_painter/src/pages/curve_header.dart';
+import 'package:backgrounds_custom_painter/src/pages/diagonal_header.dart';
+import 'package:backgrounds_custom_painter/src/pages/pico_header.dart';
+import 'package:backgrounds_custom_painter/src/pages/triangle_header.dart';
+import 'package:backgrounds_custom_painter/src/pages/waves_header.dart';
 import 'package:flutter/material.dart';
 
 import '../theme/theme.dart';
@@ -8,21 +14,34 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton.extended(
-        heroTag: "btn1",
-        backgroundColor: Color(0xffff7477),
-        onPressed: () => Navigator.pushNamed(context, 'circular-header'),
-        label: Row(
-          children: <Widget>[
-            Text('Redondeado'),
-            VerticalDivider(),
-            Icon(Icons.arrow_forward_ios)
-          ],
-        )
-      ),
-      body: Container(
-        height: 300.0,
-        color: myTheme.primaryColor,
+      body: PageView(
+        children: <Widget>[
+          Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Container(
+                height: 300.0,
+                color: myTheme.primaryColor,
+              ),
+              Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Text('Siguiente', textScaleFactor: 1.5,),
+                    Icon(Icons.chevron_right, size: 35.0)
+                  ],
+                ),
+              )
+            ],
+          ),
+          CircularHeader(),
+          DiagonalHeader(),
+          TriangleHeader(),
+          PicoHeader(),
+          CurveHeader(),
+          WavesHeader(),
+        ],
       )
     );
   }

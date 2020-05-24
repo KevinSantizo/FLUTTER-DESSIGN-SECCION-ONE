@@ -19,33 +19,23 @@ class PicoHeader extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: 25.0, horizontal: 20.0),
+            padding: const EdgeInsets.all(20.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                FloatingActionButton.extended(
-                  heroTag: "btn1",
-                  backgroundColor: Color(0xffff7477),
-                  onPressed: () => Navigator.pop(context), 
-                  label: Row(
-                    children: <Widget>[
-                      Icon(Icons.arrow_back_ios),
-                      VerticalDivider(),
-                      Text('Back'),
-                    ],
-                  )
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Icon(Icons.chevron_left, size: 35.0),
+                    Text('Anterior', textScaleFactor: 1.5,),
+                  ],
                 ),
-                FloatingActionButton.extended(
-                  heroTag: "btn2",
-                  backgroundColor: Color(0xffff7477),
-                  onPressed: () => Navigator.pushNamed(context, 'curve-header'), 
-                  label: Row(
-                    children: <Widget>[
-                      Text('Curve'),
-                      VerticalDivider(),
-                      Icon(Icons.arrow_forward_ios)
-                    ],
-                  )
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Text('Siguiente', textScaleFactor: 1.5,),
+                    Icon(Icons.chevron_right, size: 35.0)
+                  ],
                 ),
               ],
             ),

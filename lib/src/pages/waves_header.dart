@@ -19,21 +19,23 @@ class WavesHeader extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: 25.0, horizontal: 20.0),
+            padding: const EdgeInsets.all(20.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                FloatingActionButton.extended(
-                  heroTag: "btn1",
-                  backgroundColor: Colors.white,
-                  onPressed: () => Navigator.pop(context), 
-                  label: Row(
-                    children: <Widget>[
-                      Icon(Icons.arrow_back_ios, color: Color(0xffff7477)),
-                      VerticalDivider(),
-                      Text('Back', textScaleFactor: 1.3, style: TextStyle(color: Color(0xffff7477)),),
-                    ],
-                  )
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Icon(Icons.chevron_left, size: 35.0),
+                    Text('Anterior', textScaleFactor: 1.5,),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Text('Siguiente', textScaleFactor: 1.5,),
+                    Icon(Icons.chevron_right, size: 35.0)
+                  ],
                 ),
               ],
             ),

@@ -69,45 +69,6 @@ class _DashboardPageState extends State<DashboardPage>   {
           ),
         ],
       ),
-      // bottomNavigationBar: BottomNavyBar(
-      //   curve: Curves.fastOutSlowIn,
-      //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      //   iconSize: 25.0,
-      //   selectedIndex: _currentIndex,
-      //   onItemSelected: (index) {
-      //     setState(() => _currentIndex = index);
-      //   },
-      //   items: <BottomNavyBarItem>[
-      //     BottomNavyBarItem(
-      //       textAlign: TextAlign.center,
-      //       title: Text('Inicio'),
-      //       icon: Icon(Feather.home),
-      //       activeColor: color_1,
-      //       inactiveColor: inactiveColor
-      //     ),
-      //     BottomNavyBarItem(
-      //       textAlign: TextAlign.center,
-      //       title: Text('Partidos'),
-      //       icon: Icon(Feather.calendar),
-      //       activeColor: color_2,
-      //       inactiveColor: inactiveColor
-      //     ),
-      //     BottomNavyBarItem(
-      //       textAlign: TextAlign.center,
-      //       title: Text('Favoritas'),
-      //       icon: Icon(Feather.heart) ,
-      //       activeColor: color_3,
-      //       inactiveColor: inactiveColor
-      //     ),
-      //     BottomNavyBarItem(
-      //       textAlign: TextAlign.center,
-      //       title: Text('Perfil'),
-      //       icon: Icon(LineAwesomeIcons.user, size: 30.0,),
-      //       activeColor: color_4,
-      //       inactiveColor: inactiveColor
-      //     ),
-      //   ],
-      // ),
     );
   }
 
