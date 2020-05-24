@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../theme/theme.dart';
 
 
-class DiagonalHeader extends StatelessWidget {
+class CurveHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,7 +15,7 @@ class DiagonalHeader extends StatelessWidget {
             width: double.infinity,
             // color: myTheme.primaryColor,
             child: CustomPaint(
-              painter: _HeaderDiagonalPainter(),
+              painter: _CurveHeaderPainter(),
             ),
           ),
           Padding(
@@ -38,10 +38,10 @@ class DiagonalHeader extends StatelessWidget {
                 FloatingActionButton.extended(
                   heroTag: "btn2",
                   backgroundColor: Color(0xffff7477),
-                  onPressed: () => Navigator.pushNamed(context, 'triangle-header'), 
+                  onPressed: () => Navigator.pushNamed(context, 'waves-header'), 
                   label: Row(
                     children: <Widget>[
-                      Text('Triangle'),
+                      Text('Waves'),
                       VerticalDivider(),
                       Icon(Icons.arrow_forward_ios)
                     ],
@@ -56,21 +56,22 @@ class DiagonalHeader extends StatelessWidget {
   }
 }
 
-class _HeaderDiagonalPainter extends CustomPainter {
+class _CurveHeaderPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final pencil = new Paint();
     pencil.color = myTheme.primaryColor;
     pencil.style = PaintingStyle.fill;
-    pencil.strokeWidth = 2.0;
+    pencil.strokeWidth = 20;
 
     final path = new Path();
     //Dibujar
 
-    path.moveTo(0, size.height * 0.35);
-    path.lineTo(size.width, size.height * 0.30);
+    path.lineTo(0, size.height * 0.25);
+    path.quadraticBezierTo(size.width * 0.5, size.height * 0.4, size.width, size.height * 0.25);
     path.lineTo(size.width, 0);
-    path.lineTo(0, 0);
+
+   
 
     canvas.drawPath(path, pencil);
   }

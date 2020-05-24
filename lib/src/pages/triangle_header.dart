@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../theme/theme.dart';
 
 
-class DiagonalHeader extends StatelessWidget {
+class TriangleHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,7 +15,7 @@ class DiagonalHeader extends StatelessWidget {
             width: double.infinity,
             // color: myTheme.primaryColor,
             child: CustomPaint(
-              painter: _HeaderDiagonalPainter(),
+              painter: _TriangleHeaderPainter(),
             ),
           ),
           Padding(
@@ -38,10 +38,10 @@ class DiagonalHeader extends StatelessWidget {
                 FloatingActionButton.extended(
                   heroTag: "btn2",
                   backgroundColor: Color(0xffff7477),
-                  onPressed: () => Navigator.pushNamed(context, 'triangle-header'), 
+                  onPressed: () => Navigator.pushNamed(context, 'pico-header'), 
                   label: Row(
                     children: <Widget>[
-                      Text('Triangle'),
+                      Text('pico-header'),
                       VerticalDivider(),
                       Icon(Icons.arrow_forward_ios)
                     ],
@@ -56,7 +56,7 @@ class DiagonalHeader extends StatelessWidget {
   }
 }
 
-class _HeaderDiagonalPainter extends CustomPainter {
+class _TriangleHeaderPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final pencil = new Paint();
@@ -67,10 +67,9 @@ class _HeaderDiagonalPainter extends CustomPainter {
     final path = new Path();
     //Dibujar
 
-    path.moveTo(0, size.height * 0.35);
-    path.lineTo(size.width, size.height * 0.30);
+    path.moveTo(0, 0);
+    path.lineTo(size.width, size.height);
     path.lineTo(size.width, 0);
-    path.lineTo(0, 0);
 
     canvas.drawPath(path, pencil);
   }
