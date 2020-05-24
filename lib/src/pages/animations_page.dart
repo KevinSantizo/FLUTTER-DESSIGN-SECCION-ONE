@@ -37,7 +37,18 @@ class _SqareAnimatedState extends State<SqareAnimated> with  SingleTickerProvide
 
   @override
   Widget build(BuildContext context) {
-    return _Rectangle();
+
+    animationController.forward();
+    return AnimatedBuilder(
+      animation: animationController,
+      // child: child,
+      builder: (BuildContext context, Widget child) {
+        return Transform.rotate(
+          angle: rotation.value,
+          child: _Rectangle()
+        );
+      },
+    );
   }
 }
 
@@ -51,7 +62,7 @@ class _Rectangle extends StatelessWidget {
         width: 70,
         height: 70,
         decoration: BoxDecoration(
-          color: Colors.green
+          color: Colors.lightBlue
         ),
       );
     }
