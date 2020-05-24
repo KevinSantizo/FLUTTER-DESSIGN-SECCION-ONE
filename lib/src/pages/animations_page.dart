@@ -1,3 +1,5 @@
+import 'dart:math' as Math;
+
 import 'package:flutter/material.dart';
 
 class AnimationPage extends StatelessWidget {
@@ -25,7 +27,14 @@ class _SqareAnimatedState extends State<SqareAnimated> with  SingleTickerProvide
   @override
   void initState() {
     animationController = new AnimationController(vsync: this, duration: Duration(milliseconds: 4000));
-    rotation = Tween(begin: 0.0, end: 2.0).animate(animationController);
+    rotation = Tween(begin: 0.0, end: 2 * Math.pi).animate(animationController);
+
+    //Listeners
+    animationController.addListener(() { 
+      if (animationController.status == AnimationStatus.completed) {
+        animationController.reverse();
+      }
+    });
     super.initState();
   }
 
